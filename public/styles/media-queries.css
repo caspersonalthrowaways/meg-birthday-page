@@ -1,0 +1,13 @@
+@media (width < 68.75rem) {
+  /* Spacing variables */
+  :root {
+    /* Spacing for layout A -- wider */
+    --my-A: 0.8rem;
+    --mx-A: 0.8rem;
+    /* Spacing for layout A -- thinner*/
+    --my-B: 1rem;
+    --mx-B: 1rem;
+    /* Override bootstrap variables */
+    --bs-gutter-x: 2rem;
+  }
+}

@@ -8,6 +8,12 @@
     --font-size-megisold: 4rem;
     --font-size-megisold-mobile: 1.5rem;
     --font-size-megisold-mobile-evensmaller: 1.2rem;
+
+    --font-size-message-header: 3rem;
+    --font-size-message-header-mobile: 1.5rem;
+
+    --message-scroll-container-width: calc(100vw - var(--mx-A));
+
 }
 
 body {
@@ -64,6 +70,72 @@ body {
     max-width: 40rem;
     margin: 0 auto;
 }
+
+.message-section-container {
+    height: 40rem;
+    position: relative;
+
+    .message-header {
+        font-family: "ED Nimpkish-Regular", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: var(--font-size-message-header, 1.5rem);
+    }
+
+    .message-header-image {
+        position: absolute;
+        top: 3rem;
+    }
+
+    .message-scroll-container {
+        position: absolute;
+        width: var(--message-scroll-container-width);
+        top: 15rem;
+        /* Hide scrollbar for IE, Edge and Firefox */
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+        // padding-top: 2rem;
+        
+        display: grid;
+        grid-auto-flow: column;
+        gap: 1rem;
+        overflow-y: scroll;
+        height: auto;
+
+        .message-box {
+            // transform: rotate(8deg);
+            &.first-letter {
+                margin-left: var(--mx-B);
+            }
+        }
+
+        .message-placeholder {
+            background-color: gray;
+            width: 20rem;
+            height: auto;
+        }
+
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+    }
+
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.example::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.example {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
 
 // .title-container {
 //     display: flex;
@@ -166,13 +238,6 @@ body {
 //     }
 // }
 
-
-// .message-header {
-//     text-align: center;
-//     font-size: 18vw;
-//     padding: 0 1rem;
-// }
-
 // // > 1100 px
 @media (width >= 68.75rem){
     .title-container {
@@ -188,6 +253,11 @@ body {
 @media (width < 68.75rem){
     .megisold, .megisold button{
         font-size: var(--font-size-megisold-mobile, 2rem);
+    }
+    .message-section-container {
+        .message-header {
+            font-size: var(--font-size-message-header-mobile, 1.5rem);
+        }
     }
 }
 

@@ -45,7 +45,7 @@ const G_nice = ["GENIUS!", "GREAT!", "GOOD!"]
 
 const M_evil = ["MATULOG!"]
 const E_evil = ["EVIL!"]
-const G_evil = ["GLUTTONOUS!", "GAY!"]
+const G_evil = ["GLUTTONOUS!", "GAY!", "GYATT!!!!!"]
 
 standsForSwitch();
 
