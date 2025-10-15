@@ -1,5 +1,115 @@
-.message-header {
-  text-align: center;
-  font-size: 18vw;
-  padding: 0 1rem;
+@font-face {
+  font-family: "ED Nimpkish-Regular";
+  src: url("../assets/font/ED_Nimpkish-Regular.otf");
+  font-style: normal;
+  font-weight: 400;
+}
+/* Color variables */
+:root {
+  --pink-light-01: #F48B99;
+  --pink-dark-01: #B83556;
+  --bg-white: #FAF7F0;
+}
+
+/* Spacing variables */
+:root {
+  /* Spacing for layout A -- wider */
+  --my-A: 1.5rem;
+  --mx-A: 1rem;
+  /* Spacing for layout A -- thinner*/
+  --my-B: 2.5rem;
+  --mx-B: 2rem;
+  /* Override bootstrap variables */
+  --bs-gutter-x: 2rem;
+}
+
+:root {
+  --font-size-title: 10rem;
+  --font-size-title-mobile: 4.5rem;
+  --font-size-title-mobile-evensmaller: 3rem;
+  --font-size-megisold: 4rem;
+  --font-size-megisold-mobile: 1.5rem;
+  --font-size-megisold-mobile-evensmaller: 1.2rem;
+}
+
+body {
+  background-color: var(--bg-white);
+}
+
+.title-container {
+  position: relative;
+  padding: 0 var(--mx-A, 1rem) var(--my-A, 1.5rem) var(--mx-A, 1rem);
+}
+.title-container h1 {
+  font-family: "Kalnia", serif;
+  font-weight: 700;
+  font-size: var(--font-size-title-mobile, 5rem);
+}
+.title-container .title-container-0, .title-container .title-container-1, .title-container .title-container-2 {
+  position: relative;
+}
+.title-container .title-container-0 {
+  margin-top: 2rem;
+}
+.title-container .title-container-1.rightalign {
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 0px;
+          flex: 1 0 0px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: hidden;
+  padding: 0.1rem 0;
+  position: relative;
+  width: 100%;
+}
+
+.megisold, .megisold button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: var(--font-size-megisold, 3rem);
+}
+.megisold button, .megisold button button {
+  color: var(--pink-light-01);
+}
+
+.carousel {
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+@media (width >= 68.75rem) {
+  .title-container h1 {
+    font-size: var(--font-size-title, 10rem);
+  }
+}
+@media (width < 68.75rem) {
+  .megisold, .megisold button {
+    font-size: var(--font-size-megisold-mobile, 2rem);
+  }
+}
+@media (width <= 33.75rem) {
+  .title-container .title-container-0 {
+    margin-top: 1rem;
+  }
+  .title-container h1 {
+    font-size: var(--font-size-title-mobile-evensmaller, 3rem);
+  }
+  .megisold, .megisold button {
+    font-size: var(--font-size-megisold-mobile-evensmaller, 2rem);
+  }
 }

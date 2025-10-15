@@ -1,5 +1,208 @@
-.message-header {
-    text-align: center;
-    font-size: 18vw;
-    padding: 0 1rem;
+@use "variables";
+
+:root {
+    --font-size-title: 10rem;
+    --font-size-title-mobile: 4.5rem;
+    --font-size-title-mobile-evensmaller: 3rem;
+
+    --font-size-megisold: 4rem;
+    --font-size-megisold-mobile: 1.5rem;
+    --font-size-megisold-mobile-evensmaller: 1.2rem;
+}
+
+body {
+    background-color: var(--bg-white);
+}
+
+.title-container {
+    position: relative;
+    padding: 0 var(--mx-A, 1rem) var(--my-A, 1.5rem) var(--mx-A, 1rem);
+    h1 {
+        font-family: "Kalnia", serif;
+        font-weight: 700;
+        font-size: var(--font-size-title-mobile, 5rem);
+    }
+
+    .title-container-0, .title-container-1, .title-container-2 {
+        position: relative;
+    }
+
+
+    .title-container-0 {
+        margin-top: 2rem;
+    }
+
+    .title-container-1 {
+        &.rightalign{
+            align-content: flex-start;
+            align-items: flex-start;
+            display: flex;
+            flex: 1 0 0px;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            overflow: hidden;
+            padding: 0.1rem 0;
+            position: relative;
+            width: 100%;
+        }
+        
+    }
+}
+
+.megisold, .megisold button{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: var(--font-size-megisold, 3rem);
+
+    button {
+        color: var(--pink-light-01);
+    }
+}
+
+.carousel {
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
+// .title-container {
+//     display: flex;
+//     flex: none;
+//     flex-direction: column;
+//     flex-wrap: nowrap;
+//     gap: 0;
+//     height: auto;
+//     justify-content: flex-start;
+//     overflow: hidden;
+//     position: relative;
+//     width: 100%;
+//     z-index: 1;
+
+//     padding: 0 var(--mx-A, 1rem) var(--my-A, 1.5rem) var(--mx-A, 1rem);
+
+//     h1 {
+//         font-family: "Kalnia", serif;
+//         font-weight: 700;
+//         font-size: var(--font-size-title-mobile, 5rem);
+//     }
+
+//     .title-container-0 {
+//     }
+
+//     .title-container-1 {
+//     }
+
+//     .title-container-2 {
+//     }
+// }
+
+// .title-container {
+//     flex: none;
+//     flex-direction: column;
+//     flex-wrap: nowrap;
+//     gap: 0;
+//     height: auto;
+//     justify-content: flex-start;
+//     // overflow: hidden;
+//     position: relative;
+//     width: 100%;
+//     z-index: 1;
+
+//     padding: 0 var(--mx-A, 1rem) var(--my-A, 1.5rem) var(--mx-A, 1rem);
+
+//     h1 {
+//         font-family: "Kalnia", serif;
+//         font-weight: 700;
+//         font-size: var(--font-size-title-mobile, 10rem);
+//     }
+
+//     .title-container-0 {
+//         display: contents;
+//     }
+
+//     .title-container-1 {
+//         align-content: flex-start;
+//         align-items: flex-start;
+//         display: flex;
+//         flex: 1 0 0px;
+//         flex-direction: row;
+//         flex-wrap: nowrap;
+//         justify-content: space-between;
+//         overflow: hidden;
+//         padding: 0.1rem 0;
+//         position: relative;
+//         width: 100%;
+//     }
+
+//     .title-container-2 {
+//         outline: none;
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: flex-start;
+//         opacity: 1;
+//         flex-shrink: 0;
+//         flex: none;
+//         height: auto;
+//         overflow: visible;
+//         position: relative;
+//         white-space: pre;
+//         width: auto;
+//     }
+
+//     .top {
+//         align-items: flex-start;
+//     }
+
+//     .center {
+//         align-items: center;
+//     }
+
+//     .end {
+//         align-items: flex-end;
+//     }
+
+//     .thisthingthatihate {
+//         opacity: 0;
+//     }
+// }
+
+
+// .message-header {
+//     text-align: center;
+//     font-size: 18vw;
+//     padding: 0 1rem;
+// }
+
+// // > 1100 px
+@media (width >= 68.75rem){
+    .title-container {
+        // display: flex;
+        // height: 100vh;
+        h1 {
+            font-size: var(--font-size-title, 10rem);
+        }
+    }
+}
+
+// // < 1100 px
+@media (width < 68.75rem){
+    .megisold, .megisold button{
+        font-size: var(--font-size-megisold-mobile, 2rem);
+    }
+}
+
+
+// 540 px
+@media (width <= 33.75rem){
+    .title-container {
+        .title-container-0 {
+            margin-top: 1rem;
+        }
+        h1 {
+            font-size: var(--font-size-title-mobile-evensmaller, 3rem);
+        }
+    }
+    .megisold, .megisold button{
+        font-size: var(--font-size-megisold-mobile-evensmaller, 2rem);
+    }
 }

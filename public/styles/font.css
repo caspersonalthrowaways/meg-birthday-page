@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "ED Nimpkish-Regular";
+  src: url("../assets/font/ED_Nimpkish-Regular.otf");
+  font-style: normal;
+  font-weight: 400;
+}
+/* Color variables */
+:root {
+  --pink-light-01: #F48B99;
+  --pink-dark-01: #B83556;
+  --bg-white: #FAF7F0;
+}
+
+/* Spacing variables */
+:root {
+  /* Spacing for layout A -- wider */
+  --my-A: 1.5rem;
+  --mx-A: 1rem;
+  /* Spacing for layout A -- thinner*/
+  --my-B: 2.5rem;
+  --mx-B: 2rem;
+  /* Override bootstrap variables */
+  --bs-gutter-x: 2rem;
+}
+
+@font-face {
+  font-family: "ED Nimpkish-Regular";
+  src: url("../assets/font/ED_Nimpkish-Regular.otf");
+  font-style: normal;
+  font-weight: 400;
+}

@@ -1,0 +1,45 @@
+@use "normalize";
+@use "reset";
+@use "variables";
+
+* {
+    // color: var(--pink-dark-01);
+    // font-family: "Montserrat", "Arial", sans-serif;
+}
+
+.lightpink {
+    color: var(--pink-light-01);
+}
+
+.darkpink {
+    color: var(--pink-dark-01);
+}
+
+body {
+    background-color: var(--bg-white);
+}
+
+h1, h2, h3, p {
+    color: var(--pink-dark-01);
+    font-family: "Montserrat", "Arial", sans-serif;
+}
+
+a, button {
+    text-decoration: underline var(--pink-light-01);
+    text-decoration-thickness: 0.045em;
+    text-underline-offset: 10px;
+    &:hover, &:focus{
+        opacity: 0.8;
+        text-decoration: none;
+    }
+}
+
+.my-A {margin-left: var(--my-A); margin-right: var(--my-A)}
+.mx-A {margin-left: var(--mx-A); margin-right: var(--mx-A)}
+.my-B {margin-left: var(--my-B); margin-right: var(--my-B)}
+.mx-B {margin-left: var(--mx-B); margin-right: var(--mx-B)}
+
+.py-A {padding-left: var(--my-A); padding-right: var(--my-A)}
+.px-A {padding-left: var(--mx-A); padding-right: var(--mx-A)}
+.py-B {padding-left: var(--my-B); padding-right: var(--my-B)}
+.px-B {padding-left: var(--mx-B); padding-right: var(--mx-B)}
