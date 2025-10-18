@@ -72,12 +72,16 @@ main {
     }
 
     main {
-        margin: 3rem 2rem 0 2rem ;    
+        margin: 3rem 1rem 0 1rem ;    
     }
 
     .message-container {
         margin-left: 0;
         margin-right: 0;
+        padding: 1.5rem;
+        p {
+            font-size: 1rem;
+        }
         .picture {
             width: var(--img-width-mobile-evensmaller, 10rem);
         }
