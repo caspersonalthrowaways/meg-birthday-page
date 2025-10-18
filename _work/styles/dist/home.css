@@ -64,32 +64,19 @@
   margin-top: 2rem;
 }
 .title-container .title-container-1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   overflow: hidden;
   position: relative;
   padding: 0.1rem 0;
   width: 100%;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 0px;
-          flex: 1 0 0px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  flex: 1 0 0px;
 }
 .title-container .title-container-1.rightalign {
-  -ms-flex-line-pack: start;
-      align-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
 }
 .title-container .title-container-2 img {
   width: var(--title-img-A, 10rem);
@@ -180,10 +167,11 @@
   width: var(--message-scroll-container-width);
   top: 85%;
   /* Hide scrollbar for IE, Edge and Firefox */
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
   padding-bottom: 10rem;
-  display: -ms-grid;
   display: grid;
   grid-auto-flow: column;
   gap: 5rem;
@@ -192,10 +180,8 @@
   /* Hide scrollbar for Chrome, Safari and Opera */
 }
 .message-section-container .message-scroll-container .message-box {
-  -webkit-transform: rotate(5deg);
-          transform: rotate(5deg);
-  -webkit-transform-origin: top left;
-          transform-origin: top left;
+  transform: rotate(5deg);
+  transform-origin: top left;
 }
 .message-section-container .message-scroll-container .message-box.first-letter {
   margin-left: calc(var(--mx-B) * 2 + 1rem);
@@ -216,14 +202,17 @@
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .example {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 @media (width >= 68.75rem) {
   .title-container h1 {
     font-size: var(--font-size-title, 10rem);
   }
+
   .meg-stands-for {
     margin-left: 5rem;
     margin-right: 5rem;
@@ -233,12 +222,15 @@
   .megisold, .megisold button {
     font-size: var(--font-size-megisold-mobile, 2rem);
   }
+
   .message-section-container .message-header {
     font-size: var(--font-size-message-header-mobile, 1.5rem);
   }
+
   .carousel {
     padding: var(--polaroid-padding-mobile, 1rem) var(--polaroid-padding-mobile, 1rem) calc(var(--polaroid-padding-mobile, 1rem) * 4) var(--polaroid-padding-mobile, 1rem);
   }
+
   .meg-stands-for {
     padding: 2rem 2.5rem;
   }
@@ -265,6 +257,7 @@
   .title-container .title-container-2 img.B {
     width: var(--title-img-B-mobile, 5rem);
   }
+
   .megisold, .megisold button {
     font-size: var(--font-size-megisold-mobile-evensmaller, 2rem);
   }

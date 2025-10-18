@@ -1,0 +1,11 @@
+.youtube-embed-container {
+  padding: 0.5rem;
+}
+.youtube-embed-container .youtube-embed {
+  max-width: 50rem;
+  aspect-ratio: 9/16;
+}
+
+h3 {
+  font-family: "Comic Sans MS", sans-serif;
+}

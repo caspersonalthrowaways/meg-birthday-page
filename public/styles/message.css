@@ -1,0 +1,83 @@
+body {
+  background-color: var(--pink-light-02);
+  --img-width: 17rem;
+  --img-width-mobile: 15rem;
+  --img-width-mobile-evensmaller: 13rem;
+}
+
+main {
+  margin: 3rem 3rem 0 3rem;
+}
+
+.message-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3rem;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 2.5rem;
+}
+
+.message-container {
+  max-width: 50vw;
+  min-height: 100vh;
+  background-color: var(--white-01);
+  padding: 3rem;
+  margin: 0 auto;
+  margin-top: 10rem;
+  border-radius: 8px;
+}
+.message-container h1 {
+  font-family: "Kalnia", sans-serif;
+  font-size: 3rem;
+}
+.message-container .picture {
+  width: var(--img-width, 20rem);
+}
+.message-container p {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+@media (width <= 68.75rem) {
+  .message-container {
+    max-width: none;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  .message-container .picture {
+    width: var(--img-width-mobile, 10rem);
+  }
+}
+@media (width <= 44.375rem) {
+  .message-header {
+    gap: 1.5rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main {
+    margin: 3rem 2rem 0 2rem;
+  }
+  .message-container {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .message-container .picture {
+    width: var(--img-width-mobile-evensmaller, 10rem);
+  }
+}

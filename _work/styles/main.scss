@@ -7,6 +7,10 @@
     // font-family: "Montserrat", "Arial", sans-serif;
 }
 
+body {
+    background-color: var(--bg-white);
+}
+
 .lightpink {
     color: var(--pink-light-01);
 }
@@ -32,6 +36,14 @@ a, button {
         opacity: 0.8;
         text-decoration: none;
     }
+}
+
+.back {
+    font-family: "Montserrat", sans-serif;
+    color: var(--pink-dark-01);
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 1.5rem;
 }
 
 .my-A {margin-left: var(--my-A); margin-right: var(--my-A)}
